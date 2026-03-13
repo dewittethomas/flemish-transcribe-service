@@ -5,6 +5,7 @@ import services.model_loader as model_loader
 import torch
 import time
 from typing import BinaryIO
+from config import settings
 
 # Sampling rate (do not change!)
 SR = 16000
@@ -27,7 +28,7 @@ def transcribe(audio: BinaryIO) -> dict:
     start_time = time.time()
 
     # load audio file
-    audio_file = load_audio(audio, sampling_rate=SR, device=device)
+    audio_file = load_audio(audio, sampling_rate=SR, device=settings.device)
     #wav, lens = load_wav(os.path.join(wav_dir, wav_file), device=device)
     
     # apply VAD

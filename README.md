@@ -4,7 +4,7 @@
 
 This is a FastAPI-based REST API wrapper around the NeLF ASR model for Flemish speech recognition. It exposes the NeLF speech-to-text model via HTTP, accepting video or audio file uploads and returning transcriptions.
 
-Built on top of the original [NeLF ASR codebase](https://huggingface.co/nelfproject/NeLF_S2T_Pytorch) with extensive finetuning for Flemish speech recognition.
+Built on top of the original [NeLF ASR codebase](https://huggingface.co/nelfproject/NeLF_S2T_Pytorch).
 
 For more information about the NeLF project or contact details, visit: https://nelfproject.be
 
@@ -55,7 +55,7 @@ Download the pretrained NeLF model from HuggingFace:
 https://huggingface.co/nelfproject/NeLF_S2T_Pytorch
 ```
 
-Place the downloaded model files in the `model/` directory and the VAD model in `model/VAD/`.
+Place the downloaded model files in the `model/` directory.
 
 ### 3. Configure environment
 

@@ -5,8 +5,13 @@
 
 FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
+ARG HF_USERNAME
+ARG HF_TOKEN
+
 RUN apt-get update \
- && apt-get install -y --no-install-recommends git ffmpeg
+ && apt-get install -y --no-install-recommends git git-lfs ffmpeg 
+
+RUN git lfs install
 
 WORKDIR /app
 
@@ -17,6 +22,8 @@ WORKDIR /app/flemish-transcribe-service
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN pip cache purge
+
+RUN git clone https://${HF_USERNAME}:${HF_TOKEN}@huggingface.co/nelfproject/NeLF_S2T_Pytorch model
 
 EXPOSE 8000
 

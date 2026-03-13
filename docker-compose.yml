@@ -1,0 +1,15 @@
+services:
+  fts:
+    build:
+      dockerfile: Dockerfile
+    image: fts:latest
+    container_name: fts
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

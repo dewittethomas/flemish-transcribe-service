@@ -41,7 +41,7 @@ NeLF/
 
 ### 1. Recreate Python environment
 
-Python version: 3.11
+Python version: 3.12
 
 ```bash
 pip install -r requirements.txt

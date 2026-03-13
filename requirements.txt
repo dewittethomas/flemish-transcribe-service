@@ -9,3 +9,6 @@ humanfriendly==10.0
 torch-complex==0.4.4
 six==1.16.0
 PyYAML==6.0.2
+uvicorn
+fastapi
+pydantic-settings

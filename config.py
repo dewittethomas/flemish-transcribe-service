@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     # Device
-    device: str = "cpu"
+    device: str = "cuda"
     num_threads: int = 8
 
     # Model directories

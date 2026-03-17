@@ -6,6 +6,8 @@ services:
     container_name: fts
     ports:
       - "8000:8000"
+    env_file:
+      - .env  
     deploy:
       resources:
         reservations:
